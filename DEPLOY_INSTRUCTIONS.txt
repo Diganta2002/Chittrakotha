@@ -1,0 +1,24 @@
+DEPLOYMENT INSTRUCTIONS
+=======================
+
+You currently do not have Git installed, so we cannot push to GitHub automatically.
+
+OPTION 1: MAKE IT LIVE INSTANTLY (No Install Needed)
+----------------------------------------------------
+1. Open your web browser and go to: https://app.netlify.com/drop
+2. Open your file explorer to: D:\DIGANTA 2002
+3. Drag and drop the "PORTFOLIO" folder onto the Netlify website.
+4. Your site will be live instantly!
+
+OPTION 2: FIX GITHUB (Requires Installation)
+--------------------------------------------
+1. Download Git: https://git-scm.com/download/win
+2. Install it (click Next, Next, Next...).
+3. IMPORTANT: Restart your computer (or close and reopen VS Code completely).
+4. Then run these commands in the terminal:
+   git init
+   git add .
+   git commit -m "Launch"
+   git branch -M main
+   git remote add origin https://github.com/digantadebnath2002-sys/Chittrakotha.git
+   git push -u origin main

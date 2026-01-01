@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description"
+        content="Portfolio of a creative developer specializing in building exceptional digital experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <a href="#" class="logo">Port<span class="highlight">folio.</span></a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+
+            <div class="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="subtitle">Welcome to my world</span>
+                <h1 class="title">Hi, I'm <span class="gradient-text">Diganta</span><br>UI/UX Designer.</h1>
+                <p class="description">Crafting user-centric digital experiences with pixel-perfect precision and
+                    interactive code.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn primary">View Work</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glow-circle"></div>
+                <!-- Abstract visual elements will go here -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container w-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a multidisciplinary designer who bridges the gap between design and engineering. I
+                            create intuitive interfaces that delight users and solve complex problems.</p>
+                        <ul class="skills-list">
+                            <li>UI/UX Design</li>
+                            <li>Figma & Adobe XD</li>
+                            <li>Prototyping</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>Interaction Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container w-container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="card-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Finance App Redesign</h3>
+                            <p>Complete UX overhaul of a mobile banking application focusing on accessibility.</p>
+                            <div class="tags">
+                                <span>Figma</span>
+                                <span>UX Research</span>
+                            </div>
+                            <a href="#" class="link-btn">View Case Study</a>
+                        </div>
+                    </article>
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="card-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Travel Booking System</h3>
+                            <p>End-to-end design system and high-fidelity prototypes for a travel platform.</p>
+                            <div class="tags">
+                                <span>UI Design</span>
+                                <span>Prototyping</span>
+                            </div>
+                            <a href="#" class="link-btn">View Case Study</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-image">
+                            <div class="placeholder-image"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Design System Kit</h3>
+                            <p>A comprehensive component library built for scalability and consistency.</p>
+                            <div class="tags">
+                                <span>Design Tokens</span>
+                                <span>Components</span>
+                            </div>
+                            <a href="#" class="link-btn">View Case Study</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container w-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-text">Have a project in mind or just want to say hi? Feel free to send me a message.
+                </p>
+                <div class="contact-wrapper">
+                    <a href="mailto:hello@example.com" class="btn primary">Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand-section">
+            <h2 class="footer-brand">Chittrakotha</h2>
+            <p class="footer-tagline">Experience creativity</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Diganta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">GH</a>
+                <a href="#">LI</a>
+                <a href="#">TW</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
