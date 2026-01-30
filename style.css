@@ -717,6 +717,12 @@ body.light-theme .moon-icon {
         padding: 1.5rem 2rem;
     }
 
+    /* Hide custom cursor on mobile */
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
