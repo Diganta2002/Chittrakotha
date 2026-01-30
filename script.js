@@ -83,3 +83,78 @@ themeBtn.addEventListener('click', () => {
 });
 
 console.log("Portfolio loaded.");
+
+// Three.js Background Animation
+function init3D() {
+    const container = document.getElementById('scene-container');
+    if (!container) return;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+    
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    container.appendChild(renderer.domElement);
+
+    // Create Geometry
+    // Using an Icosahedron for a "Tech" feel
+    const geometry = new THREE.IcosahedronGeometry(2.5, 0);
+    const material = new THREE.MeshBasicMaterial({ 
+        color: 0xC1FF00, // Neon Lime from palette
+        wireframe: true,
+        transparent: true,
+        opacity: 0.15
+    });
+    
+    const shape = new THREE.Mesh(geometry, material);
+    scene.add(shape);
+
+    camera.position.z = 5;
+
+    // Mouse Interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+
+    const windowHalfX = window.innerWidth / 2;
+    const windowHalfY = window.innerHeight / 2;
+
+    document.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX - windowHalfX);
+        mouseY = (event.clientY - windowHalfY);
+    });
+
+    // Animation Loop
+    const animate = () => {
+        requestAnimationFrame(animate);
+
+        targetX = mouseX * 0.001;
+        targetY = mouseY * 0.001;
+
+        shape.rotation.y += 0.05 * (targetX - shape.rotation.y);
+        shape.rotation.x += 0.05 * (targetY - shape.rotation.x);
+        
+        // Constant idle rotation
+        shape.rotation.z += 0.002;
+        shape.rotation.y += 0.002;
+
+        renderer.render(scene, camera);
+    };
+
+    animate();
+
+    // Handle Resize
+    window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init3D);
+} else {
+    init3D();
+}
