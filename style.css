@@ -580,7 +580,8 @@ body.light-theme .moon-icon {
     margin-bottom: 1.5rem;
 }
 
-.tags span {
+.tags span,
+.tags>a {
     font-size: 0.75rem;
     color: #121212;
     background: var(--accent-color);
@@ -588,6 +589,8 @@ body.light-theme .moon-icon {
     border-radius: 2px;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .card-content .link-btn {
