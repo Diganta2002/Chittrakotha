@@ -42,7 +42,13 @@
 
         .cs-title span.filled {
             -webkit-text-stroke: 0;
-            color: var(--text-primary);
+            background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2), #ffffff, var(--gradient-1));
+            background-size: 300% 300%;
+            animation: gradientBG 5s ease infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
             position: relative;
             display: inline-block;
         }

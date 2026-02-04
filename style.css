@@ -65,13 +65,29 @@ body.light-theme .btn.primary {
 }
 
 body {
-    background-color: var(--bg-color);
+    background: linear-gradient(-45deg, #0f0f0f, #1e1e1e, #0a0a0a, #181818);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--text-primary);
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
     cursor: none;
     /* Custom cursor */
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Noise Texture Overlay */
@@ -181,7 +197,9 @@ body.light-theme .contact .section-title {
 }
 
 .gradient-text {
-    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2), #ffffff, var(--gradient-1));
+    background-size: 300% 300%;
+    animation: gradientBG 5s ease infinite;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -671,19 +689,26 @@ body.light-theme .moon-icon {
 }
 
 .footer-brand {
-    font-size: 11vw;
+    font-size: 13vw;
     font-weight: 800;
-    letter-spacing: 0.5rem;
+    letter-spacing: -0.04em;
     color: var(--text-primary);
     margin: 0;
-    line-height: 0.9;
+    line-height: 0.8;
     text-transform: uppercase;
-    width: 100%;
+    width: 100vw;
+    /* Full viewport width */
     display: block;
-    opacity: 0.05;
-    transition: all 0.5s ease;
+    white-space: nowrap;
+    opacity: 0.1;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.2, 1);
     cursor: default;
-    margin-left: -2vw;
+
+    /* Center and break out of container padding */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .footer-brand:hover {
